@@ -10,4 +10,5 @@
   - name : Downloading the file links and save it.
     get_url:
       url: http://10.60.221.176:8000/testurl.sh
-      dest: /home/yocto mode=0777
+      dest: /home/yocto/testurl.sh
+      mode: 0777
