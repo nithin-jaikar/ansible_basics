@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Copying the file form local workstation to server
+    copy: src=testcp.sh dest=/home/yocto mode=0777
+
+  - name : Downloading the file links and save it.
+    get_url:
+      url: http://10.60.221.176:8000/testurl.sh
+      dest: /home/yocto mode=0777
